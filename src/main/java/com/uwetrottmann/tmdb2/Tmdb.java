@@ -124,7 +124,7 @@ public class Tmdb {
     /**
      * Adds an interceptor to add the api key query parameter and to log requests.
      */
-    protected void setOkHttpClientDefaults(OkHttpClient.Builder builder) {
+    public void setOkHttpClientDefaults(OkHttpClient.Builder builder) {
         builder.addInterceptor(new TmdbInterceptor(this));
         if (enableDebugLogging) {
             logging = new HttpLoggingInterceptor();
